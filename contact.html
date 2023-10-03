@@ -11,7 +11,7 @@
   </head>
   
   <body class="bg-danger">
-    <nav class="navbar navbar-expand-md bg-warning fixed-top">
+    <nav class="navbar navbar-expand-md bg-warning">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -39,7 +39,36 @@
       </div>
     </nav>
 
-    <div></div>
+    <section>
+      <div class="container p-4">
+        <h1 class="text-warning">Contact</h1>
+        <div class="row bg-warning rounded p-2 m-0 text-center">
+          <div class="col-12">
+            <form>
+              <label for="fname">First name</label><br>
+              <input type="text" id="fname" name="fname"><br>
+
+              <label for="lname">Last name</label><br>
+              <input type="text" id="lname" name="lname"><br>
+
+              <label for="mail">Email</label><br>
+              <input type="text" id="mail" name="mail"><br>
+
+              <label for="subject">Subject</label><br>
+              <select id="subject" name="subject">
+                <option value="option-1">Option 1</option>
+                <option value="option-2">Option 2</option>
+                <option value="option-3">Option 3</option>
+                <option value="other">Other</option>
+              </select><br>
+
+              <label for="message">Message</label><br>
+              <textarea id="message" name="message" rows="4" cols="30"></textarea>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer></footer>
 
