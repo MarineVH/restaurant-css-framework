@@ -7,6 +7,8 @@
 
     <title>restaurant-css-framework</title>
 
+    <link href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   
@@ -43,7 +45,7 @@
       <div class="container p-4">
         <h1 class="text-warning">Contact</h1>
         <div class="row bg-warning rounded p-2 m-0 text-center">
-          <div class="col-12">
+          <div class="col-12 col-sm-12 col-md-12">
             <form>
               <div class="row">
                 <div class="col-12 col-sm-6 col-md-6 text-danger">
@@ -78,6 +80,16 @@
                 <div class="col-12 col-sm-12 col-md-12 text-danger">
                   <label for="message">Message</label><br>
                   <textarea class="rounded border-1 border-danger bg-danger-subtle" id="message" name="message" rows="4" cols="30"></textarea>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-12">
+                  <button type="submit" id="btnAction" name="btnAction" class="btn bg-transparent b-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-envelope text-danger" viewBox="0 0 16 16">
+                      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                    </svg>
+                  </button>
                 </div>
               </div>
             </form>
