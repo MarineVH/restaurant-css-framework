@@ -13,7 +13,7 @@
   </head>
   
   <body class="bg-danger">
-    <nav class="navbar navbar-expand-md bg-warning p-1">
+    <nav class="navbar navbar-expand-md bg-warning p-1 fixed-top">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -42,32 +42,32 @@
     </nav>
 
     <section>
-      <div class="container-fluid p-4">
+      <div class="container-fluid p-5">
         <h1 class="text-warning">Contact</h1>
-        <div class="row bg-warning rounded p-2 m-0 text-center">
+        <div class="row rounded p-2 m-0 text-center">
           <div class="col-12 col-sm-12 col-md-12">
             <form>
-              <div class="row">
-                <div class="col-12 col-sm-6 col-md-6 text-danger">
+              <div class="row my-3">
+                <div class="col-12 col-sm-6 col-md-6 text-warning">
                   <label for="fname">First name</label><br>
-                  <input class="rounded border-1 border-danger bg-danger-subtle" type="text" id="fname" name="fname"><br>
+                  <input class="container-fluid rounded border-1 border-warning bg-warning-subtle" type="text" id="fname" name="fname"><br>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-6 text-danger">
+                <div class="col-12 col-sm-6 col-md-6 text-warning">
                   <label for="lname">Last name</label><br>
-                  <input class="rounded border-1 border-danger bg-danger-subtle" type="text" id="lname" name="lname"><br>
+                  <input class="container-fluid rounded border-1 border-warning bg-warning-subtle" type="text" id="lname" name="lname"><br>
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-12 col-sm-6 col-md-6 text-danger">
+              <div class="row my-3">
+                <div class="col-12 col-sm-6 col-md-6 text-warning">
                   <label for="mail">Email</label><br>
-                  <input class="rounded border-1 border-danger bg-danger-subtle" type="text" id="mail" name="mail"><br>
+                  <input class="container-fluid rounded border-1 border-warning bg-warning-subtle" type="text" id="mail" name="mail"><br>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-6 text-danger">
+                <div class="col-12 col-sm-6 col-md-6 text-warning">
                   <label for="subject">Subject</label><br>
-                  <select class="rounded border-1 border-danger bg-danger-subtle" id="subject" name="subject">
+                  <select class="container-fluid rounded border-1 border-warning bg-warning-subtle text-danger" id="subject" name="subject">
                     <option value="option-1">Option 1</option>
                     <option value="option-2">Option 2</option>
                     <option value="option-3">Option 3</option>
@@ -76,20 +76,29 @@
                 </div>
               </div>
 
-              <div class="row">
+              <div class="row my-3">
                 <div class="col-12 col-sm-12 col-md-12 text-danger">
                   <label for="message">Message</label><br>
-                  <textarea class="rounded border-1 border-danger bg-danger-subtle" id="message" name="message" rows="4" cols="30"></textarea>
+                  <textarea class="container-fluid rounded border-1 border-warning bg-warning-subtle" id="message" name="message" rows="6"></textarea>
                 </div>
               </div>
 
               <div class="row">
                 <div class="col-12 col-sm-12 col-md-12">
+                  <div id="liveAlertPlaceholder">
+                    <div>
+                      <div class="alert alert-success alert-dismissible" role="alert">   
+                        <div>Message envoyé avec succès!</div>   
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div>
+                    </div>
+                  </div>
                   <button type="submit" id="btnAction" name="btnAction" class="btn bg-transparent b-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-envelope text-danger" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-envelope text-warning" viewBox="0 0 16 16">
                       <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
                     </svg>
                   </button>
+
                 </div>
               </div>
             </form>
