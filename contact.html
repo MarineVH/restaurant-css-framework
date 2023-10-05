@@ -42,48 +42,51 @@
     </nav>
 
     <section>
-      <div class="container-fluid p-5">
-        <h1 class="text-warning">Contact</h1>
-        <div class="row rounded p-2 m-0 text-center">
+      <div class="container p-5">
+        <h1 class="text-warning">Formulaire de contact</h1>
+        <div class="row rounded p-2 m-0">
           <div class="col-12 col-sm-12 col-md-12">
             <form>
               <div class="row my-3">
                 <div class="col-12 col-sm-6 col-md-6 text-warning">
-                  <label for="fname">First name</label><br>
-                  <input class="container-fluid rounded border-1 border-warning bg-warning-subtle" type="text" id="fname" name="fname"><br>
+                  <label for="prenom" class="form-label">Prénom</label><br>
+                  <input class="container-fluid form-control rounded border-1 border-warning bg-warning-subtle" type="text" id="prenom" name="prenom" placeholder="Ex.: John" required><br>
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-6 text-warning">
-                  <label for="lname">Last name</label><br>
-                  <input class="container-fluid rounded border-1 border-warning bg-warning-subtle" type="text" id="lname" name="lname"><br>
+                  <label for="nom" class="form-label">Nom</label><br>
+                  <input class="container-fluid form-control rounded border-1 border-warning bg-warning-subtle" type="text" id="nom" name="nom" placeholder="Ex.: Doe" required><br>
                 </div>
               </div>
 
               <div class="row my-3">
-                <div class="col-12 col-sm-6 col-md-6 text-warning">
-                  <label for="mail">Email</label><br>
-                  <input class="container-fluid rounded border-1 border-warning bg-warning-subtle" type="text" id="mail" name="mail"><br>
+                <div class="col-12 col-sm-12 col-md-12 text-warning">
+                  <label for="email" class="form-label">Adresse Mail</label><br>
+                  <input class="container-fluid form-control rounded border-1 border-warning bg-warning-subtle" type="text" id="email" name="email" placeholder="Entrez votre adresse mail ici ex.: johndoe@mail.com" required><br>
                 </div>
+              </div>
 
-                <div class="col-12 col-sm-6 col-md-6 text-warning">
-                  <label for="subject">Subject</label><br>
-                  <select class="container-fluid rounded border-1 border-warning bg-warning-subtle text-danger" id="subject" name="subject">
-                    <option value="option-1">Option 1</option>
-                    <option value="option-2">Option 2</option>
-                    <option value="option-3">Option 3</option>
+              <div class="row my-3">
+                <div class="col-12 col-sm-12 col-md-12 text-warning">
+                  <label for="sujet" class="form-label">Sujet</label><br>
+                  <select class="container-fluid form-select rounded border-1 border-warning bg-warning-subtle text-danger" id="subject" name="subject">
+                    <option selected disabled value="">Choisissez votre sujet</option>
+                    <option value="option-1">Réservation</option>
+                    <option value="option-2">Annulation</option>
+                    <option value="option-3">Organisation Événement</option>
                     <option value="other">Other</option>
                   </select><br>
                 </div>
               </div>
 
               <div class="row my-3">
-                <div class="col-12 col-sm-12 col-md-12 text-danger">
-                  <label for="message">Message</label><br>
-                  <textarea class="container-fluid rounded border-1 border-warning bg-warning-subtle" id="message" name="message" rows="6"></textarea>
+                <div class="col-12 col-sm-12 col-md-12 text-warning">
+                  <label for="message" class="form-label">Message</label><br>
+                  <textarea class="container-fluid form-control border-warning bg-warning-subtle" id="message" name="message" rows="6" placeholder="Écrivez votre message ici"></textarea>
                 </div>
               </div>
 
-              <div class="row">
+              <div class="row text-center">
                 <div class="col-12 col-sm-12 col-md-12">
                   <button type="button" id="liveAlertBtn" name="btnAction" class="btn bg-transparent b-0">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-envelope text-warning" viewBox="0 0 16 16">
