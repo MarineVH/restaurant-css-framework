@@ -46,50 +46,65 @@
         <h1 class="text-warning">Formulaire de contact</h1>
         <div class="row rounded p-2 m-0">
           <div class="col-12 col-sm-12 col-md-12">
-            <form>
+            <form class="needs-validation was-validated" novalidate="">
               <div class="row my-3">
                 <div class="col-12 col-sm-6 col-md-6 text-warning">
                   <label for="prenom" class="form-label">Prénom</label><br>
                   <input class="container-fluid form-control rounded border-1 border-warning bg-warning-subtle" type="text" id="prenom" name="prenom" placeholder="Ex.: John" required><br>
+                  <div class="invalid-feedback">
+                    Entrez votre prénom
+                  </div>
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-6 text-warning">
                   <label for="nom" class="form-label">Nom</label><br>
-                  <input class="container-fluid form-control rounded border-1 border-warning bg-warning-subtle" type="text" id="nom" name="nom" placeholder="Ex.: Doe" required><br>
+                  <input class="container-fluid form-control is-invalid rounded border-1 border-warning bg-warning-subtle" type="text" id="nom" name="nom" placeholder="Ex.: Doe" required><br>
+                  <div class="invalid-feedback">
+                    Entrez votre Nom de Famille
+                  </div>
                 </div>
               </div>
 
               <div class="row my-3">
                 <div class="col-12 col-sm-12 col-md-12 text-warning">
                   <label for="email" class="form-label">Adresse Mail</label><br>
-                  <input class="container-fluid form-control rounded border-1 border-warning bg-warning-subtle" type="text" id="email" name="email" placeholder="Entrez votre adresse mail ici ex.: johndoe@mail.com" required><br>
+                  <input class="container-fluid form-control is-invalid rounded border-1 border-warning bg-warning-subtle" type="text" id="email" name="email" placeholder="Entrez votre adresse mail ici ex.: johndoe@mail.com" required><br>
+                  <div class="invalid-feedback">
+                    Entrez votre adresse email
+                  </div>
                 </div>
               </div>
 
               <div class="row my-3">
                 <div class="col-12 col-sm-12 col-md-12 text-warning">
                   <label for="sujet" class="form-label">Sujet</label><br>
-                  <select class="container-fluid form-select rounded border-1 border-warning bg-warning-subtle text-danger" id="subject" name="subject">
+                  <select class="container-fluid form-select is-invalid rounded border-1 border-warning bg-warning-subtle text-danger" id="subject" name="subject" required>
                     <option selected disabled value="">Choisissez votre sujet</option>
                     <option value="option-1">Réservation</option>
                     <option value="option-2">Annulation</option>
                     <option value="option-3">Organisation Événement</option>
                     <option value="other">Other</option>
                   </select><br>
+                  <div class="invalid-feedback">
+                    Choisissez le sujet pour nous contacter
+                  </div>
                 </div>
               </div>
 
               <div class="row my-3">
                 <div class="col-12 col-sm-12 col-md-12 text-warning">
                   <label for="message" class="form-label">Message</label><br>
-                  <textarea class="container-fluid form-control border-warning bg-warning-subtle" id="message" name="message" rows="6" placeholder="Écrivez votre message ici"></textarea>
+                  <textarea class="container-fluid form-control is-invalid border-warning bg-warning-subtle" id="message" name="message" rows="6" placeholder="Écrivez votre message ici" required></textarea>
+                  <div class="invalid-feedback">
+                    Expliquez la raison pour nous contacter
+                  </div>
                 </div>
               </div>
 
               <div class="row text-center">
                 <div class="col-12 col-sm-12 col-md-12">
                   <div id="liveAlertPlaceholder"></div>
-                  <button type="button" id="liveAlertBtn" name="btnAction" class="btn bg-transparent b-0">
+                  <button type="submit" id="liveAlertBtn" name="btnAction" class="btn bg-transparent b-0">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-envelope text-warning" viewBox="0 0 16 16">
                       <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
                     </svg>
@@ -105,13 +120,33 @@
 
     <footer></footer>
 
-    <script>const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+    <script>
+    (() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+
+    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
       const appendAlert = (message, type) => {
         const wrapper = document.createElement('div')
         wrapper.innerHTML = [
           `<div class="alert alert-${type} alert-dismissible" role="alert">`,
           `   <div>${message}</div>`,
-          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+          '   <button type="submit" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
           '</div>'
         ].join('')
     
