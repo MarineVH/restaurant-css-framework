@@ -51,17 +51,11 @@
                 <div class="col-12 col-sm-6 col-md-6 text-warning">
                   <label for="prenom" class="form-label">Prénom</label><br>
                   <input class="container-fluid form-control rounded border-1 border-warning bg-warning-subtle" type="text" id="prenom" name="prenom" placeholder="Ex.: John" required><br>
-                  <div class="invalid-feedback">
-                    Entrez votre prénom
-                  </div>
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-6 text-warning">
                   <label for="nom" class="form-label">Nom</label><br>
                   <input class="container-fluid form-control is-invalid rounded border-1 border-warning bg-warning-subtle" type="text" id="nom" name="nom" placeholder="Ex.: Doe" required><br>
-                  <div class="invalid-feedback">
-                    Entrez votre Nom de Famille
-                  </div>
                 </div>
               </div>
 
@@ -69,9 +63,6 @@
                 <div class="col-12 col-sm-12 col-md-12 text-warning">
                   <label for="email" class="form-label">Adresse Mail</label><br>
                   <input class="container-fluid form-control is-invalid rounded border-1 border-warning bg-warning-subtle" type="text" id="email" name="email" placeholder="Entrez votre adresse mail ici ex.: johndoe@mail.com" required><br>
-                  <div class="invalid-feedback">
-                    Entrez votre adresse email
-                  </div>
                 </div>
               </div>
 
@@ -85,9 +76,6 @@
                     <option value="option-3">Organisation Événement</option>
                     <option value="other">Other</option>
                   </select><br>
-                  <div class="invalid-feedback">
-                    Choisissez le sujet pour nous contacter
-                  </div>
                 </div>
               </div>
 
@@ -95,9 +83,6 @@
                 <div class="col-12 col-sm-12 col-md-12 text-warning">
                   <label for="message" class="form-label">Message</label><br>
                   <textarea class="container-fluid form-control is-invalid border-warning bg-warning-subtle" id="message" name="message" rows="6" placeholder="Écrivez votre message ici" required></textarea>
-                  <div class="invalid-feedback">
-                    Expliquez la raison pour nous contacter
-                  </div>
                 </div>
               </div>
 
@@ -118,7 +103,39 @@
       </div>
     </section>
 
-    <footer></footer>
+    <footer class="text-center">
+      <section class="border-top border-warning border-2">
+        <div class="container-fluid text-warning">
+          <div class="row my-3">
+            <div class="col-12 col-sm-12 col-md-4">
+              <h1>Yu Shifu</h1>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4">
+              <h2>Liens utiles</h2>
+              <ul class="list-group">
+                <li class="list-group-item text-warning border-0 bg-transparent">
+                  <a href="menu.html" class="text-warning">Menu</a>
+                </li>
+                <li class="list-group-item text-warning border-0 bg-transparent">
+                  <a href="restaurant.html" class="text-warning">Horaires</a>
+                </li>
+                <li class="list-group-item text-warning border-0 bg-transparent">
+                  <a href="contact.html" class="text-warning">Contact</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4">
+              <h2>Adresse</h2>
+              <p>Lodewijk Vankeerberghenstraat, 68</br> 1831 Diegem</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="text-danger bg-warning">© 2023 Copyright: Yu Shifu</div>
+    </footer>
 
     <script>
     (() => {
